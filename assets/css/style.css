@@ -1,0 +1,46 @@
+.to-do-list {
+  margin: 80px 250px;
+}
+
+.to-do-list .top-list .btn {
+  border: 1px solid black;
+  width: 150px;
+}
+
+.to-do-list .top-list .input-text {
+  width: 450px;
+}
+
+.to-do-list ul {
+  margin-top: 10px;
+  background-color: #90a2a3;
+}
+
+.to-do-list ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-decoration: none;
+  border-bottom: 1px solid #f7f5f5;
+  padding: 20px 0;
+  color: white;
+}
+
+.to-do-list ul li .input-style {
+  background-color: #90a2a3;
+  color: white;
+  width: 400px;
+}
+
+.to-do-list ul li .xClose-style {
+  width: 20px;
+  margin-right: 10px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

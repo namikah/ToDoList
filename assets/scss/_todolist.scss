@@ -1,0 +1,38 @@
+.to-do-list {
+  margin: 80px 250px;
+  .top-list {
+    .btn {
+      border: 1px solid black;
+      width: 150px;
+    }
+    .input-text {
+      width: 450px;
+    }
+  }
+  ul {
+    margin-top: 10px;
+    background-color: rgb(144, 162, 163);
+    li {
+      display: flex;
+      justify-content: space-between;
+      //   border: 1px solid rgb(247, 245, 245);
+      text-decoration: none;
+      border-bottom: 1px solid rgb(247, 245, 245);
+      padding: 20px 0;
+      color: white;
+      .input-style {
+        background-color: rgb(144, 162, 163);
+        color: white;
+        width: 400px;
+      }
+      .xClose-style {
+        width: 20px;
+        margin-right: 10px;
+        background-color: red;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
