@@ -1,9 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .to-do-list {
   margin: 80px 250px;
   .top-list {
     .btn {
       border: 1px solid black;
       width: 150px;
+      &:hover{
+        background-color: rgb(102, 139, 240);
+      }
     }
     .input-text {
       width: 450px;

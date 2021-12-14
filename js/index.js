@@ -4,18 +4,25 @@ const btn = document.querySelector(".btn-enter");
 const ol = document.createElement("ul");
 todolist.appendChild(ol);
 
+text.addEventListener("keyup", (e)=>{
+    if(e.keyCode === 13) {
+        e.preventDefault();
+        btn.click();
+    }
+})
+
 btn.addEventListener("click", () => {
     const li = document.createElement("li");
-    const leftSide = document.createElement("div");
+    const content = document.createElement("div");
     const span = document.createElement("span");
-    const rightSide = document.createElement("span");
+    const xClose = document.createElement("span");
     span.innerText = text.value;
-    rightSide.innerText = "X";
-    rightSide.classList.add("xClose-style");
+    xClose.innerText = "X";
+    xClose.classList.add("xClose-style");
 
-    leftSide.appendChild(span);
-    li.appendChild(leftSide);
-    li.appendChild(rightSide);
+    content.appendChild(span);
+    li.appendChild(content);
+    li.appendChild(xClose);
     ol.appendChild(li);
     const inputText = document.createElement("input");
     inputText.classList.add("input-style");
@@ -24,7 +31,7 @@ btn.addEventListener("click", () => {
     span.addEventListener("click", () => {
         inputText.value = span.innerText;
         span.style.display = "none";
-        leftSide.appendChild(inputText);
+        content.appendChild(inputText);
         inputText.style.display = "block";
 
         inputText.addEventListener("blur", () => {
@@ -34,7 +41,7 @@ btn.addEventListener("click", () => {
         })
     })
 
-    rightSide.addEventListener("click", ()=>{
+    xClose.addEventListener("click", () => {
         li.remove();
     })
 })
